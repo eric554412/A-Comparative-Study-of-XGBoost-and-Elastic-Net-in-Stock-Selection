@@ -107,7 +107,7 @@
   模型最小化預測誤差與 L1 懲罰項的和：
 
 $$
-\min_{\beta} \left\{ \frac{1}{2n} \sum_{i=1}^{n} (y_i - x_i^{T}\beta)^2 + \alpha \sum_{j=1}^{p} |\beta_j| \right\}
+\min_{\beta} \left\lbrace \frac{1}{2n} \sum_{i=1}^{n} (y_i - x_i^{T}\beta)^2 + \alpha \sum_{j=1}^{p} |\beta_j| \right\rbrace
 $$
 
   其中：
