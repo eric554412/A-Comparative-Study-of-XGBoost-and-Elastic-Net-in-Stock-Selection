@@ -10,7 +10,7 @@
 
 1.  **資料爬取 (`web_crawler.py`)**: 從台灣證券交易所 (TWSE) 爬蟲與台灣經濟新報 (TEJ) 獲取價量、財務與籌碼數據。
 2.  **資料處理 (`data_process.py`)**: 整合多來源數據，計算還原權值股價，並合併成給模型訓練用的月頻特徵檔 `merged_monthly.csv`。
-3.  **模型訓練與預測 (`elastic_net_model.py`, `xg_boost_model.py`)**: 以擴充視窗方式每月重新訓練模型，預測股票下個月的報酬。
+3.  **模型訓練與預測 (`lasso_model.py`, `xg_boost_model.py`)**: 以擴充視窗方式每月重新訓練模型，預測股票下個月的報酬。
 4.  **回測與績效分析 (`backtest.py`)**: 根據模型預測分數建立投資組合，模擬交易並計算完整績效指標。
 
 ---
@@ -243,7 +243,7 @@ $$
 
 **特徵重要性分析**
 
-![XGBoost 特徵重要性](xg_boost/elastic_best_decile_best_vs_worst_importance.png)
+![XGBoost 特徵重要性](xg_boost/xgboost_best_decile_best_vs_worst_importance.png)
 
 **績效最好的分組部分依賴分析 (PDP)**
 
